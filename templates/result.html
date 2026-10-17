@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Translation Result</h2>
+
+    <h3>Original Text</h3>
+
+    <div class="output-box">
+        {{ original_text }}
+    </div>
+
+    <br>
+
+    <h3>Source Language</h3>
+
+    <div class="output-box">
+        {{ source_language }}
+    </div>
+
+    <br>
+
+    <h3>Target Language</h3>
+
+    <div class="output-box">
+        {{ target_language }}
+    </div>
+
+    <br>
+
+    <h3>Translated Text</h3>
+
+    <div class="output-box">
+        {{ translated_text }}
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>
+            Translate Another Text
+        </button>
+    </a>
+
+</div>
+
+{% endblock %}

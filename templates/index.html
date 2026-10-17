@@ -1,0 +1,67 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="card">
+
+    <h2>Translate Your Text</h2>
+
+    {% if error %}
+    <p class="error-message">{{ error }}</p>
+    {% endif %}
+
+    <form action="/translate" method="POST">
+
+        <label>Enter Text</label>
+
+        <textarea
+            name="text"
+            rows="8"
+            placeholder="Type your text here..."
+            required></textarea>
+
+        <br><br>
+
+        <label>Source Language</label>
+
+        <select name="source_language">
+
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Telugu</option>
+            <option>Tamil</option>
+            <option>Kannada</option>
+            <option>Malayalam</option>
+            <option>French</option>
+            <option>German</option>
+
+        </select>
+
+        <br><br>
+
+        <label>Target Language</label>
+
+        <select name="target_language">
+
+            <option>Telugu</option>
+            <option>Hindi</option>
+            <option>English</option>
+            <option>Tamil</option>
+            <option>Kannada</option>
+            <option>Malayalam</option>
+            <option>French</option>
+            <option>German</option>
+
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Translate
+        </button>
+
+    </form>
+
+</div>
+
+{% endblock %}
